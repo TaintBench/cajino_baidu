@@ -47,7 +47,7 @@ Failed
 	android.permission.READ_PHONE_STATE
 	android.permission.WRITE_SETTINGS
 	android.permission.ACCESS_DOWNLOAD_MANAGER
-## Sources: 502
+## Sources: 514
 	<org.apache.http.util.EntityUtils: java.lang.String getContentCharSet(org.apache.http.HttpEntity)>: 2
 	<java.io.ByteArrayOutputStream: byte[] toByteArray()>: 20
 	<java.lang.ThreadGroup: int getMaxPriority()>: 1
@@ -96,9 +96,11 @@ Failed
 	<java.util.HashMap: java.lang.Object get(java.lang.Object)>: 56
 	<org.apache.http.auth.BasicUserPrincipal: java.lang.String getName()>: 1
 	<android.content.Intent: android.os.Parcelable getParcelableExtra(java.lang.String)>: 10
+	<java.net.HttpURLConnection: java.io.InputStream getInputStream()>: 1
 	<java.lang.StringBuffer: void getChars(int,int,char[],int)>: 2
 	<java.lang.ExceptionInInitializerError: java.lang.Throwable getException()>: 1
 	<org.apache.http.auth.NTCredentials: java.lang.String getWorkstation()>: 2
+	<android.database.Cursor: int getInt(int)>: 22
 	<org.apache.http.protocol.BasicHttpProcessor: org.apache.http.HttpRequestInterceptor getRequestInterceptor(int)>: 2
 	<java.security.KeyPairGenerator: java.security.KeyPairGenerator getInstance(java.lang.String)>: 1
 	<org.apache.http.impl.auth.DigestScheme: java.lang.String createDigest(org.apache.http.auth.Credentials)>: 2
@@ -125,6 +127,7 @@ Failed
 	<org.apache.http.impl.conn.tsccm.BasicPoolEntry: org.apache.http.conn.OperatedClientConnection getConnection()>: 4
 	<java.lang.String: void getChars(int,int,char[],int)>: 1
 	<java.text.DateFormat: java.lang.Object clone()>: 2
+	<android.database.Cursor: java.lang.String getString(int)>: 66
 	<org.apache.commons.codec.binary.Base64: byte[] discardNonBase64(byte[])>: 1
 	<android.app.Activity: android.content.Intent getIntent()>: 1
 	<android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>: 6
@@ -145,6 +148,7 @@ Failed
 	<javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>: 1
 	<java.lang.reflect.Array: java.lang.Object newInstance(java.lang.Class,int)>: 1
 	<java.lang.reflect.Method: java.lang.String getName()>: 2
+	<java.io.File: java.io.File[] listFiles()>: 4
 	<java.io.LineNumberReader: java.lang.String readLine()>: 2
 	<android.content.Intent: java.lang.String[] getStringArrayExtra(java.lang.String)>: 1
 	<java.io.DataInputStream: java.lang.String readUTF()>: 2
@@ -191,6 +195,7 @@ Failed
 	<java.util.ResourceBundle: java.util.ResourceBundle getBundle(java.lang.String)>: 2
 	<android.telephony.TelephonyManager: java.lang.String getLine1Number()>: 4
 	<java.lang.ThreadLocal: java.lang.Object get()>: 12
+	<java.net.URL: java.io.InputStream openStream()>: 3
 	<org.apache.http.impl.client.DefaultUserTokenHandler: java.security.Principal getAuthPrincipal(org.apache.http.auth.AuthState)>: 2
 	<org.apache.http.cookie.CookieSpecRegistry: org.apache.http.cookie.CookieSpec getCookieSpec(java.lang.String,org.apache.http.params.HttpParams)>: 2
 	<java.lang.ClassLoader: java.util.Enumeration getSystemResources(java.lang.String)>: 1
@@ -246,6 +251,7 @@ Failed
 	<org.apache.http.impl.conn.tsccm.ConnPoolByRoute: org.apache.http.impl.conn.tsccm.RouteSpecificPool getRoutePool(org.apache.http.conn.routing.HttpRoute,boolean)>: 6
 	<java.net.InetAddress: java.net.InetAddress getByName(java.lang.String)>: 8
 	<java.security.MessageDigest: byte[] digest(byte[])>: 8
+	<java.io.FileInputStream: void <init>: 15
 	<java.util.ArrayList: java.lang.Object get(int)>: 14
 	<org.apache.http.protocol.BasicHttpProcessor: int getResponseInterceptorCount()>: 3
 	<org.apache.http.conn.params.ConnPerRouteBean: int getMaxForRoute(org.apache.http.conn.routing.HttpRoute)>: 1
@@ -279,13 +285,17 @@ Failed
 	<java.net.URI: java.lang.String getFragment()>: 5
 	<java.security.KeyPair: java.security.PublicKey getPublic()>: 1
 	<org.apache.http.impl.client.AbstractHttpClient: org.apache.http.client.CookieStore getCookieStore()>: 1
+	<org.apache.http.HttpEntity: java.io.InputStream getContent()>: 19
+	<android.database.Cursor: long getLong(int)>: 7
 	<android.net.wifi.WifiManager: java.util.List getScanResults()>: 1
+	<java.io.File: boolean delete()>: 10
 	<org.apache.http.impl.cookie.RFC2965Spec: java.util.List parse(org.apache.http.HeaderElement[],org.apache.http.cookie.CookieOrigin)>: 1
 	<org.apache.http.impl.client.TunnelRefusedException: org.apache.http.HttpResponse getResponse()>: 2
 	<org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>: 1
 	<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()>: 1
 	<org.apache.http.HttpHost: java.lang.String getSchemeName()>: 10
 	<org.apache.http.message.BasicHeaderValueParser: org.apache.http.NameValuePair[] parseParameters(org.apache.http.util.CharArrayBuffer,org.apache.http.message.ParserCursor)>: 1
+	<java.io.File: void <init>: 60
 	<java.net.InetAddress: java.net.InetAddress[] getAllByName(java.lang.String)>: 2
 	<java.io.StringWriter: java.lang.StringBuffer getBuffer()>: 3
 	<org.apache.http.impl.cookie.CookieSpecBase: java.lang.String getDefaultPath(org.apache.http.cookie.CookieOrigin)>: 1
@@ -407,6 +417,7 @@ Failed
 	<android.os.Environment: java.io.File getExternalStorageDirectory()>: 16
 	<org.apache.http.message.HeaderGroup: org.apache.http.Header[] getHeaders(java.lang.String)>: 2
 	<org.apache.http.impl.cookie.CookieSpecBase: java.lang.String getDefaultDomain(org.apache.http.cookie.CookieOrigin)>: 1
+	<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>: 42
 	<org.apache.http.impl.conn.tsccm.BasicPoolEntry: long getUpdated()>: 2
 	<java.security.KeyStore: void load(java.io.InputStream,char[])>: 1
 	<org.apache.http.message.BasicHeaderElementIterator: void parseNextElement()>: 2
@@ -476,6 +487,7 @@ Failed
 	<java.net.URI: int getPort()>: 4
 	<java.net.URL: int getPort()>: 3
 	<javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>: 10
+	<android.content.Context: java.lang.Object getSystemService(java.lang.String)>: 34
 	<android.os.Environment: java.lang.String getExternalStorageState()>: 2
 	<org.apache.http.impl.conn.tsccm.ConnPoolByRoute: org.apache.http.impl.conn.tsccm.BasicPoolEntry getFreeEntry(org.apache.http.impl.conn.tsccm.RouteSpecificPool,java.lang.Object)>: 2
 	<javax.net.ssl.SSLContext: javax.net.ssl.SSLSocketFactory getSocketFactory()>: 6
@@ -550,7 +562,7 @@ Failed
 	<org.apache.http.params.HttpProtocolParams: org.apache.http.ProtocolVersion getVersion(org.apache.http.params.HttpParams)>: 4
 	<org.apache.http.params.HttpConnectionParams: int getConnectionTimeout(org.apache.http.params.HttpParams)>: 8
 	<org.apache.http.client.params.HttpClientParams: java.lang.String getCookiePolicy(org.apache.http.params.HttpParams)>: 1
-## Sinks: 225
+## Sinks: 246
 	<org.apache.http.auth.AuthState: void setAuthScope(org.apache.http.auth.AuthScope)>: 10
 	<android.content.Intent: android.content.Intent setPackage(java.lang.String)>: 18
 	<android.location.Criteria: void setBearingRequired(boolean)>: 1
@@ -601,9 +613,11 @@ Failed
 	<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])>: 2
 	<org.apache.http.impl.entity.EntitySerializer: void serialize(org.apache.http.io.SessionOutputBuffer,org.apache.http.HttpMessage,org.apache.http.HttpEntity)>: 2
 	<org.apache.http.impl.cookie.BasicClientCookie2: void setPorts(int[])>: 1
+	<java.net.HttpURLConnection: java.io.InputStream getInputStream()>: 1
 	<android.content.Intent: android.content.Intent setClassName(java.lang.String,java.lang.String)>: 5
 	<org.apache.http.conn.params.ConnPerRouteBean: void setDefaultMaxPerRoute(int)>: 2
 	<java.util.logging.LogRecord: void setSourceMethodName(java.lang.String)>: 2
+	<android.content.SharedPreferences$Editor: boolean commit()>: 26
 	<android.widget.RemoteViews: void setProgressBar(int,int,int,boolean)>: 2
 	<org.apache.http.conn.scheme.SchemeRegistry: org.apache.http.conn.scheme.Scheme register(org.apache.http.conn.scheme.Scheme)>: 4
 	<android.content.ContentValues: void put(java.lang.String,java.lang.Long)>: 6
@@ -611,10 +625,14 @@ Failed
 	<java.lang.Float: float parseFloat(java.lang.String)>: 1
 	<java.lang.StringBuffer: void setLength(int)>: 36
 	<android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>: 1
+	<java.io.BufferedWriter: void write(java.lang.String)>: 1
 	<org.apache.http.impl.AbstractHttpClientConnection: org.apache.http.io.HttpMessageParser createResponseParser(org.apache.http.io.SessionInputBuffer,org.apache.http.HttpResponseFactory,org.apache.http.params.HttpParams)>: 1
 	<android.view.View: void setBackgroundColor(int)>: 1
 	<org.apache.http.message.HeaderGroup: void updateHeader(org.apache.http.Header)>: 2
+	<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>: 1
 	<org.apache.http.message.BasicHeaderValueParser: org.apache.http.HeaderElement parseHeaderElement(org.apache.http.util.CharArrayBuffer,org.apache.http.message.ParserCursor)>: 1
+	<java.io.OutputStreamWriter: void <init>: 4
+	<android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)>: 7
 	<android.util.Log: int i(java.lang.String,java.lang.String)>: 12
 	<org.apache.http.entity.SerializableEntity: void createBytes(java.io.Serializable)>: 2
 	<java.util.HashSet: boolean add(java.lang.Object)>: 4
@@ -625,6 +643,7 @@ Failed
 	<org.apache.http.impl.client.EntityEnclosingRequestWrapper: void setEntity(org.apache.http.HttpEntity)>: 1
 	<android.view.Window: void setType(int)>: 1
 	<org.apache.http.impl.io.AbstractSessionOutputBuffer: void write(byte[])>: 4
+	<java.net.URL: void <init>: 6
 	<java.io.OutputStream: void write(byte[])>: 5
 	<java.io.ObjectOutputStream: void writeBoolean(boolean)>: 6
 	<org.apache.http.impl.cookie.DateUtils: java.util.Date parseDate(java.lang.String,java.lang.String[])>: 1
@@ -635,8 +654,10 @@ Failed
 	<android.app.NotificationManager: void notify(java.lang.String,int,android.app.Notification)>: 4
 	<android.location.Criteria: void setCostAllowed(boolean)>: 1
 	<org.apache.http.params.BasicHttpParams: void setParameters(java.lang.String[],java.lang.Object)>: 1
+	<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>: 1
 	<org.apache.http.params.HttpProtocolParams: void setContentCharset(org.apache.http.params.HttpParams,java.lang.String)>: 3
 	<java.io.Writer: void write(java.lang.String)>: 5
+	<java.lang.Class: java.lang.Class forName(java.lang.String)>: 80
 	<java.lang.reflect.Field: void set(java.lang.Object,java.lang.Object)>: 1
 	<java.lang.Thread: void setName(java.lang.String)>: 8
 	<org.apache.http.impl.EnglishReasonPhraseCatalog: void setReason(int,java.lang.String)>: 48
@@ -648,6 +669,8 @@ Failed
 	<java.lang.reflect.Array: void set(java.lang.Object,int,java.lang.Object)>: 1
 	<org.apache.http.params.HttpConnectionParams: void setLinger(org.apache.http.params.HttpParams,int)>: 1
 	<org.apache.http.impl.AbstractHttpServerConnection: org.apache.http.io.HttpMessageParser createRequestParser(org.apache.http.io.SessionInputBuffer,org.apache.http.HttpRequestFactory,org.apache.http.params.HttpParams)>: 1
+	<java.io.PrintWriter: void println(java.lang.String)>: 4
+	<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>: 42
 	<org.apache.http.conn.params.ConnManagerParams: void setMaxConnectionsPerRoute(org.apache.http.params.HttpParams,org.apache.http.conn.params.ConnPerRoute)>: 1
 	<org.json.JSONObject: org.json.JSONObject put(java.lang.String,double)>: 3
 	<android.webkit.WebView: void setWebChromeClient(android.webkit.WebChromeClient)>: 1
@@ -657,6 +680,8 @@ Failed
 	<org.apache.http.impl.conn.tsccm.WaitingThreadAborter: void setWaitingThread(org.apache.http.impl.conn.tsccm.WaitingThread)>: 1
 	<org.apache.http.protocol.UriPatternMatcher: void setObjects(java.util.Map)>: 1
 	<android.location.Criteria: void setAltitudeRequired(boolean)>: 1
+	<java.io.FileOutputStream: void <init>: 8
+	<java.io.FileOutputStream: void write(byte[])>: 1
 	<android.widget.ImageView: void setImageDrawable(android.graphics.drawable.Drawable)>: 1
 	<org.apache.http.params.HttpProtocolParams: void setUserAgent(org.apache.http.params.HttpParams,java.lang.String)>: 4
 	<android.widget.LinearLayout: void setOrientation(int)>: 1
@@ -667,9 +692,11 @@ Failed
 	<org.apache.http.util.ByteArrayBuffer: void setLength(int)>: 2
 	<java.util.logging.Logger: void setLevel(java.util.logging.Level)>: 1
 	<org.json.JSONObject: org.json.JSONObject put(java.lang.String,int)>: 43
+	<java.io.FileWriter: void write(java.lang.String)>: 2
 	<org.apache.http.protocol.HttpService: void setConnReuseStrategy(org.apache.http.ConnectionReuseStrategy)>: 1
 	<android.content.Intent: android.content.Intent putStringArrayListExtra(java.lang.String,java.util.ArrayList)>: 1
 	<org.apache.http.impl.io.AbstractMessageParser: org.apache.http.Header[] parseHeaders(org.apache.http.io.SessionInputBuffer,int,int,org.apache.http.message.LineParser)>: 1
+	<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>: 4
 	<android.app.DownloadManager$Request: android.app.DownloadManager$Request setDestinationInExternalPublicDir(java.lang.String,java.lang.String)>: 1
 	<java.text.DateFormat: void setCalendar(java.util.Calendar)>: 3
 	<org.apache.http.impl.cookie.BasicClientCookie: void setPath(java.lang.String)>: 1
@@ -679,6 +706,7 @@ Failed
 	<org.apache.http.impl.conn.tsccm.ConnPoolByRoute: void setMaxTotalConnections(int)>: 1
 	<java.lang.Integer: int parseInt(java.lang.String,int)>: 8
 	<org.apache.http.auth.AuthSchemeRegistry: void register(java.lang.String,org.apache.http.auth.AuthSchemeFactory)>: 4
+	<java.io.DataOutputStream: void write(byte[])>: 1
 	<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>: 16
 	<android.webkit.WebSettings: void setDomStorageEnabled(boolean)>: 1
 	<java.io.ObjectOutputStream: void writeUTF(java.lang.String)>: 1
@@ -733,15 +761,19 @@ Failed
 	<android.webkit.WebSettings: void setCacheMode(int)>: 1
 	<java.net.ServerSocket: void setSoTimeout(int)>: 2
 	<android.util.Log: int w(java.lang.String,java.lang.String)>: 20
+	<android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>: 4
+	<android.content.Context: android.content.ComponentName startService(android.content.Intent)>: 2
 	<java.lang.String: java.lang.String replace(char,char)>: 7
 	<android.app.ActivityManager: java.util.List getRunningServices(int)>: 3
 	<java.net.Socket: void setTcpNoDelay(boolean)>: 3
 	<org.apache.http.params.HttpProtocolParams: void setUseExpectContinue(org.apache.http.params.HttpParams,boolean)>: 3
 	<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>: 69
 	<org.apache.http.impl.io.AbstractSessionOutputBuffer: void write(byte[],int,int)>: 1
+	<android.content.Context: void startActivity(android.content.Intent)>: 8
 	<org.apache.http.impl.client.RequestWrapper: void setURI(java.net.URI)>: 2
 	<android.util.Log: int w(java.lang.String,java.lang.Throwable)>: 1
 	<java.text.DateFormat: void setTimeZone(java.util.TimeZone)>: 10
+	<java.net.URLConnection: java.io.InputStream getInputStream()>: 2
 	<org.apache.http.conn.params.ConnPerRouteBean: void setMaxForRoute(org.apache.http.conn.routing.HttpRoute,int)>: 1
 	<java.util.logging.Logger: void log(java.util.logging.Level,java.lang.String,java.lang.Throwable)>: 1
 	<android.app.NotificationManager: void notify(int,android.app.Notification)>: 1
@@ -757,6 +789,7 @@ Failed
 	<java.io.ObjectOutputStream: void writeObject(java.lang.Object)>: 20
 	<org.apache.http.message.BasicHeaderValueParser: org.apache.http.HeaderElement[] parseElements(org.apache.http.util.CharArrayBuffer,org.apache.http.message.ParserCursor)>: 1
 	<java.util.logging.Logger: void log(java.util.logging.LogRecord)>: 1
+	<java.io.File: boolean delete()>: 10
 	<org.apache.http.impl.cookie.BasicClientCookie: void setAttribute(java.lang.String,java.lang.String)>: 1
 	<java.lang.StringBuilder: void setLength(int)>: 2
 	<org.apache.http.entity.BasicHttpEntity: void setContentLength(long)>: 3
